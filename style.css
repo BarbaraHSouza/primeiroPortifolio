@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+* {
+ margin: 0;
+ padding: 0;   
+} /* necessario sempre resetar o CSS */
+
+body {
+    height: 100vh;
+    box-sizing: border-box; /* Para um elemento pai nao sair do elemento filho */
+    background-color: black;
+    color: white;
+}
+
+.titulo-destaque {
+    color: gold;
+}
+
+.apresentacao{
+    display: flex;
+    align-items: center; /*quando usadas no pai, sao responsaveis pelos filhos*/
+    justify-content: space-between; /*quando usadas no pai, sao responsaveis pelos filhos*/
+    margin: 10% 15%;
+}
+
+.apresentacao__conteudo{
+    width: 615px;
+    display: flex; /*sempre se coloca displey, no caso para separar conteiners, no que esta no meio*/
+    flex-direction: column;
+    gap: 25px; /*A propriedade gap não é exclusiva do Flexbox, porém é utilizada quase sempre em conjunto com ele. Ela especifica no CSS o tamanho dos espaços entre linhas e colunas em layouts de grid, flex e multi-column. Sua sintaxe é bem simples e ela aceita um ou dois valores.*/
+}
+
+/* COMO FORMATAR TEXTOS */
+.apresentacao__conteudo__titulo{
+    font-size: 32px;
+    font-family: "Krona One", sans-serif;
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 24; 
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+}
+
+/* FORMATACAO INICIAL DE IMAGEM, EXISTE MUITO MAIS. */
+.imagemmedia {
+    width: 320px;
+    height: 320px;
+    border-radius: 180px;
+    padding: 3%;
+}
+
+.apresentacao__botoom {
+    display: flex; /* sempre comeca assim quando se trata de justify... */
+    justify-content: space-between;
+}
+
+.apresentacao__botoom__botao {
+    background-color: goldenrod;
+    width: 180px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 16px;
+    padding: 12px 0; /*neste caso e sempre vertical primeiro e horizontal em seguida */
+    text-decoration: none;
+    color: black;
+    font-family: "montserrar", sans-serif;
+    font-weight: 600;
+}
