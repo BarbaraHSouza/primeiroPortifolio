@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+:root {
+    --color-primaria: #2c3639;
+    --color-secundaria: #dcd7c9;
+    --color-terciaria: #a27c5c;
+    --color-quartenaria:#a27c5c;
+    --color-quintaria:#3f4e4f;
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: 'montserrat', sans-serif;
+}
+
+* {
+ margin: 0;
+ padding: 0;   
+} /* necessario sempre resetar o CSS */
+
+body {
+    /* height: 100vh; */ 
+    box-sizing: border-box; /* Para um elemento pai nao sair do elemento filho */
+    background-color: var(--color-primaria);
+    color: var(--color-secundaria);
+}
+
+.cabecalho {
+    padding: 2% 0 0 15%;
+}
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__texto {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.12rem;
+    color:var(--color-terciaria);
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.cabecalho__menu__texto:hover{
+    font-size: 1.25rem;
+    color:var(--color-secundaria);
+}
+
+.titulo-destaque {
+    color: var(--color-terciaria);
+}
+
+.apresentacao{
+    display: flex;
+    align-items: center; /*quando usadas no pai, sao responsaveis pelos filhos*/
+    justify-content: space-between; /*quando usadas no pai, sao responsaveis pelos filhos*/
+    padding: 5% 15%;
+    gap: 30px;
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex; /*sempre se coloca displey, no caso para separar conteiners, no que esta no meio*/
+    flex-direction: column;
+    gap: 25px; /*A propriedade gap não é exclusiva do Flexbox, porém é utilizada quase sempre em conjunto com ele. Ela especifica no CSS o tamanho dos espaços entre linhas e colunas em layouts de grid, flex e multi-column. Sua sintaxe é bem simples e ela aceita um ou dois valores.*/
+}
+
+/* COMO FORMATAR TEXTOS */
+.apresentacao__conteudo__titulo{
+    font-size: 2rem;
+    font-family: var(--fonte-primaria);
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 24; 
+    font-family: var(--fonte-secundaria);
+    text-align: justify;
+    gap: 32px;
+}
+
+.apresentacao__botoom {
+    display: flex; /* sempre comeca assim quando se trata de justify... */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.apresentacao__botoom__subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.apresentacao__botoom__botao {
+    /*background-color:deeppink;*/
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 50%;
+    border: 2px solid var(--color-quartenaria);
+    text-align: center;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 12px 0; /*neste caso e sempre vertical primeiro e horizontal em seguida */
+    text-decoration: none;
+    color: var(--color-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+}
+
+.apresentacao__botoom__botao:hover { /*diferencia quando o mouse esta em cima dos elementos*/
+    background-color: var(--color-quintaria);
+}
+
+.apresentacao__b__b__img {
+    width: 22px;
+    height: 22px;
+}
+
+/* FORMATACAO INICIAL DE IMAGEM, EXISTE MUITO MAIS. */
+.imagemmedia {
+    width: 50%;
+    border-radius: 250px;
+    padding: 1%;
+}
+
+.imagemmedia:hover{
+    filter: opacity(80%);
+}
+
+.rodape {
+    text-align: center;
+    background-color: var(--color-terciaria);
+    font-family: var(--fonte-secundaria);
+    padding: 14px;
+    height: auto;
+    color: var(--color-primaria);
+}
+
+@media (max-width: 1200px) { /*usado para adaptar no mobile.*/
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
+        /*width: 100%; outra forma de colocar, a mais utilizada */
+    }
+}
